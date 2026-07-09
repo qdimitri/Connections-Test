@@ -69,8 +69,8 @@ export default function TradeStreamCard({
           <span>{stockTxt.timeTxt}</span>
           <span>{stockTxt.sideTxt}</span>
           <span className="trade-price-cell">{stockTxt.priceTxt}</span>
-          <span className="trade-price-cell">{stockTxt.sizeTxt}</span>
-          <span className="trade-price-cell">{stockTxt.seqTxt}</span>
+          <span className="trade-size">{stockTxt.sizeTxt}</span>
+          <span className="trade-seq">{stockTxt.seqTxt}</span>
         </div>
         <div className="trade-tape-list">
           {trades.length === 0 && <div className="trade-empty">Waiting for trades…</div>}
@@ -80,7 +80,7 @@ export default function TradeStreamCard({
               <span className={t.side === "buy" ? "trade-side-buy" : "trade-side-sell"}>{t.side.toUpperCase()}</span>
               <span className="trade-price-cell">${t.price.toFixed(2)}</span>
               <span className="trade-size">{t.size}</span>
-              <span className="trade-price-cell">{formatSeq(t.seq)}</span>
+              <span className="trade-seq">{formatSeq(t.seq)}</span>
             </div>
           ))}
         </div>
