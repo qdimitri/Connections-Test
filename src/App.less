@@ -7,10 +7,12 @@ body {
   color: #f8fafc;
   display: flex;
   align-items: stretch;
-  flex-wrap: wrap;
+  justify-content: center;
   
-  @media (max-width: 1440px) {
+  @media (max-width: 999px) {
+    flex-wrap: wrap;
     flex-direction: column;
+    align-content: space-around;
     padding: 1em;
   }
 

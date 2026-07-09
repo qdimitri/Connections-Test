@@ -233,7 +233,7 @@ export default function AmcTradeStreamMain() {
           ? `Last resynced ${new Date(lastPolledAt).toLocaleTimeString([], { hour12: false })}`
           : "Waiting for first resync…"
       }
-      infoText="NOTE: Uses same mock WebSocket feed 'API Alpha' simulating live trades. Disconnects randomly after some trades. Reconnects automatically and resumes with next trade sequence resulting in data loss, then uses mock Rest feed 'API Bravo' to poll on disconnect to backfill any missing trades."
+      infoText="NOTE: Uses same mock WebSocket feed 'API Alpha' simulating live trades. Disconnects randomly. Reconnects automatically and resumes with next trade sequence resulting in data loss, then uses mock Rest feed 'API Bravo' to poll on disconnect to backfill any missing trades."
     />
   );
 }
