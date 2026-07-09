@@ -1,0 +1,193 @@
+.trade-stream-card {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  background: #0b0e11;
+  color: #e5e7eb;
+  border-radius: 12px;
+  padding: 15px;
+  width:100%;
+  max-width: 400px;
+  min-height: 510px;
+  margin: 13px auto;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &.Alpha {
+    background: #0b0e11;
+  }
+
+  &.Bravo {
+    background: #0b0e11;
+  }
+
+  &.Unified {
+    background: #200044;
+  }
+
+  .trade-stream-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px; 
+    
+      .trade-stream-label {
+        font-size: 13px;
+        color: #9ca3af;
+        letter-spacing: 1px;
+      }
+
+      .trade-stream-symbol {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .trade-stream-meta {
+        font-size: 12px;
+        color: #b8b8b8;
+        margin-top: 2px;
+      }
+
+      .trade-stream-status {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        .status-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        .status-connecting {
+          background: #eab308;
+        }
+
+        .status-open, .status-polling {
+          background: #22c55e;
+        }
+
+        .status-closed, .status-idle {
+          background: #6b7280;
+        }
+
+        .status-error {
+          background: #ef4444;
+        }
+
+        .status-resyncing {
+          background: #3b82f6;
+        }
+
+        .status-text {
+          font-size: 12px;
+          color: #9ca3af;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .trade-price {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      transition: color 0.2s ease;
+    }
+
+    .price-up {
+      color: #22c55e;
+    }
+
+    .price-down {
+      color: #ef4444;
+    }
+
+    .price-neutral {
+      color: #e5e7eb;
+    }
+
+  .trade-tape {
+    border-top: 1px solid #1f2937;
+    padding-top: 8px;
+    height: 350px;
+    
+    .trade-tape-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      font-size: 11px;
+      color: #6b7280;
+      padding-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .trade-tape-list {
+      max-height: 320px;
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+      padding: 0 8px 12px 0;
+      scrollbar-width: thin;
+      scrollbar-color: #374151 transparent;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #374151;
+        border-radius: 8px;
+      }
+
+      .trade-empty {
+        color: #6b7280;
+        font-size: 13px;
+        padding: 12px 0;
+      }
+
+      .trade-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        font-size: 13px;
+        padding: 4px 0;
+        border-bottom: 1px solid #14181f;
+
+        .trade-time {
+          color: #9ca3af;
+        }
+
+        .trade-side-buy {
+          color: #22c55e;
+        }
+
+        .trade-side-sell {
+          color: #ef4444;
+        }
+
+        .trade-size {
+          text-align: right;
+          color: #9ca3af;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .trade-price-cell {
+      text-align: right;
+      padding-right:10px;
+    }
+  }
+
+  .info-box {
+    font-family: 'Gill Sans', sans-serif;
+    padding: 8px 0 0 0;
+    font-style: italic;
+    font-size: 15px;
+    height: 105px;
+    text-align: justify;
+    border-top:2px dotted #FFFFFF; 
+  }
+}
